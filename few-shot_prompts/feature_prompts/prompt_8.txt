@@ -1,0 +1,16 @@
+prompt = f"""Considering cloud service vendor selection, classify Term, as a **standalone term**, given Context.  Is it a cloud service feature, category, supported software or programming language, certification or other notable characteristic of a vendor (True/False)?. The term should be domain-specific, technical, meaningful by itself, convey cloud-specific implementations and not common web service practices. The provided context is not exhaustive, do not base the answer on it.
+Examples:
+  * True :  CRM (Customer Relationship Management) - Software designed for managing customer data in the cloud.
+  * True :  Audit Logs - Feature for tracking activity within a cloud service.
+  * True :  Linux - supported operating system.
+  * False : public internet access - not a cloud provider feature
+  * False : execution / algorithm / CPU / Bytes  : not meaningful as standalone
+  * True : parallel execution / machine learning algorithm / Computing resources / Storage Capacity
+  * True: Cyber Security / Business Intelligence
+  * False : cloud / cloud service / cloud application / cloud customer : too general, looking for specific features
+  * False : HTTP / port / HTML / CSS/ template : domain relevant, but common practices
+
+Term: {term}
+Context: {context_string}
+
+Classification? Just state True or False"""

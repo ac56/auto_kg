@@ -1,0 +1,20 @@
+prompt = f"""Considering cloud service vendor selection and the NIST Cloud Reference Architecture, classify Term, as a **standalone term**, given Context.  Is it a cloud feature, category, supported software or language, functionality, certification or process of a vendor, that a potential customer would be interested in knowing (True/False)? If the term is not meaningful/ queryable by itself, return False. The provided context is not always representative, do not base the answer on it (avoid over-classification)
+
+Examples:
+  * True :  CRM (Customer Relationship Management) - Software designed for managing customer data in the cloud.
+  * True :  Audit Logs - Feature for tracking activity within a cloud service.
+  * True :  backup as a service - cloud service.
+  * True :  Linux - supported operating system.
+  * False : algorithms - Finite sequence of rigorous instructions, too general.
+  * False : public internet access - Related, but not cloud-specific.
+  * False : execution - Ambiguous as standalone.
+  * False : cloud / cloud service / application / customer - too general. Even though they appear in the Reference Architecture, we are interested in narrower categories.
+  * True: Security / False: cyberattack (not a vendor feature)
+  * False: Intelligence / True: Business Intelligence
+  * False: Performance / True: Performance Metric or peak performance etc.
+  * False: GPU / True: Parallel Processing
+
+Term: {term}
+Context: {context_string}
+
+Classification? Just state True or False"""

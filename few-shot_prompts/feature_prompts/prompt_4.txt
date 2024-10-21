@@ -1,0 +1,16 @@
+prompt = f"""Considering cloud service selection and the NIST Cloud Reference Architecture, classify Term, as a **standalone term**, given Context.  Is it a **cloud-specific** service feature, category, supported software, certification or process (True/False)?
+
+Examples:
+  * True :  CRM (Customer Relationship Management) - Software specifically designed for managing customer data in the cloud.
+  * True :  Audit Logs - Feature for tracking activity within a cloud service.
+  * True :  backup as a service - cloud service.
+  * True :  Linux - supported operating system.
+  * False : algorithms - Finite sequence of rigorous instructions, too general.
+  * False : public internet access - Related, but not cloud-specific.
+  * False : queue - Ambiguous as standalone.
+  * False : execution - Ambiguous as standalone.
+
+Term: {term}
+Context: {context_string}
+
+Classification? Just state True or False"""

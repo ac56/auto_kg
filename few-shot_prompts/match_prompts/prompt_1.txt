@@ -1,0 +1,30 @@
+prompt = f"""Given two terms and the context they appear in, classify if they refer to the same thing/ concept.
+
+Examples:
+  * Term 1: Scratch (programming language)
+    Context 1: Scratch is a high-level block-based visual programming language and website aimed primarily at children as an educational tool for programming, with a target audience of ages 8 to 16.
+    Term 2: scratch
+    Context 2: Create custom solutions without starting from scratch. / No need to start from scratch.
+    Answer: False
+  * Term 1: CRM software
+    Context 1: Customer relationship management (CRM) is a process in which a business or other organization administers its interactions with customers, typically using data analysis to study large amounts of information.
+    Term 2: CRM
+    Context 2: Choose a CRM implementation partner that continues to grow and adapt with you, helping you stand out from the rest. / This CRM was designed for small business.
+    Answer: True
+  * Term 1: Hypervisor
+    Context 1: A hypervisor (also known as a virtual machine monitor, VMM, or virtualizer) is a type of computer software, firmware or hardware that creates and runs virtual machines.
+    Term 2: hypervisor
+    Context 2: Regardless of which hypervisor you choose, we manage and support your virtualized configuration, 24x7x365. / Hypervisor : KVM on Linux
+    Answer: True
+  * Term 1: Integrity
+    Context 1: Integrity is the practice of being honest and showing a consistent and uncompromising adherence to strong moral and ethical principles and values.
+    Term 2: integrity
+    Context 2: With business data scattered across the enterprise and value chain, managing and maintaining its integrity can be difficult. / Ensuring your data and environments are properly segmented from other machines is extremely important for the integrity of your data.'
+    Answer: False (data integrity is not exactly the same with general integirty described above)
+
+Term 1: {term1}
+Context 1: {abst_sent}
+Term 2: {term2}
+Context: {context_string}
+
+Answer? State True or False"""

@@ -1,0 +1,16 @@
+prompt = f"""Considering cloud service selection and the few-shot examples below, classify Term, as seen in Context: Relevant (True/False)?
+example: CRM
+Context: Choose a CRM implementation partner that continues to grow and adapt with you, helping you stand out from the rest. / This CRM was designed for small business.
+Relevant: True
+example: audit logs
+Context: Likewise, you can store audit logs for accessing the Kubernetes API in an S3 bucket you define. / With Cloud Audit Logs integration, every interaction with\n Secret Manager generates an audit log.
+Relevant: True
+example: resources
+Context: Distribute traffic across resources / All resources are priced on an hourly basis, so you’ll only pay for what you need, when you need it.
+Relevant: False
+example: scratch
+Context: Create custom solutions without starting from scratch. / No need to start from scratch.
+Relevant: False
+Term: {term}
+Context: {context_string}
+Classification? Just state True or False"""
